@@ -18,7 +18,7 @@ window.addEventListener("load", () => {
         .then(data => {
           console.log(data);
           const { temp } = data.main;
-          tempDeg.textContent = temp - 273;
+          tempDeg.textContent = Math.round(temp - 273);
 
           locationTimezone.textContent = data.name;
         });
